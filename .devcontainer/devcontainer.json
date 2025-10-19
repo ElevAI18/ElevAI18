@@ -8,11 +8,10 @@
         "ms-python.vscode-pylance",
         "ms-toolsai.jupyter",
         "charliermarsh.ruff"
-      ],
-      "settings": { "python.testing.pytestEnabled": true }
+      ]
     }
   },
-  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postCreateCommand": "chmod +x .devcontainer/setup.sh && .devcontainer/setup.sh",
   "remoteUser": "vscode",
-  "portsAttributes": { "8000": { "label": "App", "onAutoForward": "openPreview" } }
+  "forwardPorts": [8000]
 }
